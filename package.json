@@ -1,0 +1,30 @@
+{
+  "name": "bd-address-check",
+  "version": "1.0.0",
+  "description": "A lightweight Bangladeshi district, upazila, and postcode validator.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bangladesh",
+    "address",
+    "validator",
+    "district",
+    "upazila",
+    "postcode"
+  ],
+  "author": "Mehedi Rakib",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mehedi-rakib/bd-address-check.git"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.25",
+    "typescript": "^5.9.3"
+  }
+}
