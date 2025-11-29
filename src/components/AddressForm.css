@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS Classes - Can be overridden with Tailwind */
+.bd-address-form {
+  @apply w-full max-w-4xl mx-auto;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.bd-address-form-title {
+  @apply text-2xl md:text-3xl font-bold mb-6;
+  color: #0a0a0a;
+  letter-spacing: -0.02em;
+}
+
+.bd-address-form-field {
+  @apply relative mb-5;
+}
+
+.bd-address-form-label {
+  @apply block text-sm font-medium mb-2;
+  color: #1a1a1a;
+}
+
+.bd-address-form-input {
+  @apply w-full px-4 py-3 border rounded-lg outline-none transition-all;
+  @apply text-base;
+  background: #ffffff;
+  border-color: #e5e7eb;
+  color: #0a0a0a;
+}
+
+.bd-address-form-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.bd-address-form-input:disabled {
+  @apply bg-gray-50 cursor-not-allowed;
+  color: #9ca3af;
+}
+
+.bd-address-form-input-valid {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.bd-address-form-input-invalid {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.bd-address-form-dropdown {
+  @apply absolute z-50 w-full mt-1 rounded-lg shadow-xl;
+  @apply max-h-60 overflow-auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.bd-address-form-dropdown-item {
+  @apply w-full text-left px-4 py-3 transition-colors;
+  color: #1a1a1a;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.bd-address-form-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.bd-address-form-dropdown-item:hover {
+  background: #f8fafc;
+  color: #3b82f6;
+}
+
+.bd-address-form-suggestion {
+  @apply text-sm mt-2;
+  color: #3b82f6;
+}
+
+.bd-address-form-suggestion-text {
+  @apply font-semibold;
+  color: #2563eb;
+}
+
+.bd-address-form-valid-text {
+  @apply text-sm mt-2;
+  color: #10b981;
+}
+
+.bd-address-form-suggestion-buttons {
+  @apply flex flex-wrap gap-2 mt-2;
+}
+
+.bd-address-form-suggestion-button {
+  @apply px-3 py-1.5 rounded-md text-sm font-medium transition-colors;
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #dbeafe;
+}
+
+.bd-address-form-suggestion-button:hover {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.bd-address-form-summary {
+  @apply mt-6 p-4 rounded-lg border;
+}
+
+.bd-address-form-summary-valid {
+  background: #f0fdf4;
+  border-color: #86efac;
+}
+
+.bd-address-form-summary-warning {
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+.bd-address-form-summary-title {
+  @apply font-semibold mb-2;
+  color: #1a1a1a;
+}
+
+.bd-address-form-summary-item {
+  @apply text-sm;
+}
+
+.bd-address-form-summary-item-valid {
+  color: #059669;
+}
+
+.bd-address-form-summary-item-invalid {
+  color: #dc2626;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .bd-address-form {
+    @apply px-4 py-5;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .bd-address-form-title {
+    @apply text-xl mb-4;
+  }
+
+  .bd-address-form-input {
+    @apply py-2.5 text-sm;
+  }
+
+  .bd-address-form-dropdown {
+    max-height: 200px;
+  }
+
+  .bd-address-form-dropdown-item {
+    @apply py-2.5 text-sm;
+  }
+
+  .bd-address-form-suggestion-buttons {
+    @apply gap-1.5;
+  }
+
+  .bd-address-form-suggestion-button {
+    @apply px-2 py-1 text-xs;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .bd-address-form {
+    @apply px-6 py-6;
+  }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  .bd-address-form {
+    background: #1a1a1a;
+    color: #ffffff;
+  }
+
+  .bd-address-form-title {
+    color: #ffffff;
+  }
+
+  .bd-address-form-label {
+    color: #e5e7eb;
+  }
+
+  .bd-address-form-input {
+    background: #2a2a2a;
+    border-color: #404040;
+    color: #ffffff;
+  }
+
+  .bd-address-form-input:focus {
+    border-color: #3b82f6;
+  }
+
+  .bd-address-form-dropdown {
+    background: #2a2a2a;
+    border-color: #404040;
+  }
+
+  .bd-address-form-dropdown-item {
+    color: #e5e7eb;
+    border-bottom-color: #404040;
+  }
+
+  .bd-address-form-dropdown-item:hover {
+    background: #3a3a3a;
+  }
+}

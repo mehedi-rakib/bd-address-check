@@ -14,6 +14,10 @@ export {
   suggestions
 };
 
+// React Component Export
+export { AddressForm } from "./components/AddressForm";
+export type { AddressFormProps } from "./components/AddressForm";
+
 export type {
   Address,
   ValidationResult,
